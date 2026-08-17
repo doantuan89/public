@@ -1,5 +1,7 @@
 # Share Printer trên Windows 10 & 11
 
+Tags [ #printer, #share-printer ]
+
 Hướng dẫn chia sẻ máy in giữa **Windows 10 và Windows 11** trong cùng mạng LAN.
 
 ## 1. Điều kiện trước khi cấu hình
