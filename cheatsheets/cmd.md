@@ -2,19 +2,43 @@
 ping -a 192.168.10.123 : lấy tên máy pc khi biết địa chỉ ip 
 
 # Quản lý user login bằng net user 
-1. `net user ` xem danh sách tài khoản trên máy tính.
-2. `net user Administrator` xem chi tiết tài khoản "Administrator"
-3. `net user UserTest 123456 /add` Tạo tài khoản mới
-4. `net user UserTest 654321` Đổi mật khẩu của user UserTest thành 654321.
+Mở **cmd với quyền Administrator**
+1. xem danh sách tài khoản trên máy tính  
+  ```cmd  
+    net user
+  ``` 
 
-5. `net user UserTest /delete` Xóa tài khoản  
+2. xem chi tiết tài khoản "Administrator"
+  ```cmd 
+  net user Administrator
+  ```
+3. Tạo tài khoản mới 
+```cmd 
+net user UserTest 123456 /add
+``` 
+4. Đổi mật khẩu của user UserTest thành 654321. 
+```cmd 
+net user UserTest 654321
+```
+
+5. Xóa tài khoản  
+```cmd 
+net user UserTest /delete 
+```
 
 6. Kích hoạt hoặc vô hiệu hóa tài khoản
-```
+``` cmd
  - net user UserTest /active:yes
  - net user UserTest /active:no
 ```
- 7. `net user %username% * ` Đặt mật khẩu mới cho user hiện tại đang login.
-  Windows sẽ yêu cầu nhập mật khẩu mới.
- 8. `net localgroup Administrators "Ten User" /add` Chuyển user thường thành admin
-  -  Giữ nguyên dấu "" nếu tên user có khoảng trắng.
+ 7.Đặt mật khẩu mới cho user hiện tại đang login. 
+ ```cmd 
+ net user %username% * 
+ ```
+>Windows sẽ yêu cầu nhập mật khẩu mới.
+ 
+ 8. Chuyển user thường thành admin 
+ ```cmd 
+  net localgroup Administrators "Ten User" /add
+```  
+>Giữ nguyên dấu "" nếu tên user có khoảng trắng.
