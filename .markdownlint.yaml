@@ -1,0 +1,88 @@
+{
+    "default": true,
+
+    // ===== Headings =====
+
+    // Không bắt buộc có dòng trắng trước/sau heading
+    "MD022": false,
+
+    // Cho phép nhiều heading liên tiếp
+    "MD023": false,
+
+    // Không bắt buộc heading bắt đầu từ H1
+    "MD001": false,
+
+    // Cho phép bỏ qua một số cấp heading
+    "MD002": false,
+
+    // Không bắt buộc chỉ có một H1
+    "MD025": false,
+
+    // ===== Line length =====
+
+    // Không giới hạn độ dài dòng
+    "MD013": false,
+
+    // ===== Lists =====
+
+    // Cho phép style danh sách linh hoạt
+    "MD004": {
+        "style": "consistent"
+    },
+
+    // Dùng dấu "-" cho unordered list
+    "MD006": false,
+
+    // Không bắt buộc indent 2 spaces
+    "MD007": {
+        "indent": 2
+    },
+
+    // Cho phép nhiều dòng trong list
+    "MD032": false,
+
+    // ===== Code =====
+
+    // Không yêu cầu chỉ định ngôn ngữ sau ```
+    "MD040": false,
+
+    // Không yêu cầu fenced code block có blank line
+    "MD031": false,
+
+    // ===== HTML =====
+
+    // Cho phép HTML trong Markdown
+    "MD033": false,
+
+    // ===== Links =====
+
+    // Không bắt buộc link phải có text
+    "MD034": false,
+
+    // ===== Emphasis =====
+
+    // Dùng **bold**
+    "MD049": {
+        "style": "asterisk"
+    },
+
+    // Dùng *italic*
+    "MD050": {
+        "style": "asterisk"
+    },
+
+    // ===== Tables =====
+
+    // Không bắt buộc căn đều bảng
+    "MD055": false,
+
+    // ===== Whitespace =====
+
+    // Cho phép nhiều blank line
+    "MD012": {
+        "maximum": 2
+    },
+
+    // Cho phép nhiều khoảng trắng cuối dòng
+    "MD009": false
+}
