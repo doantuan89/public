@@ -1,0 +1,38 @@
+- đảm bảo 2 máy cùng submask net. và ping thấy nhau
+- gõ hostname để xem tên máy tính
+
+============ Trên máy Share ===================
+1. 
+  - click chuột phải chọn properties -> sharing 
+  - click button "Share"  gõ Everyone để share cho tất cả mọi người
+  - tắt Firewall 
+  - Settings → Network & Internet → Ethernet (hoặc Wi-Fi) → network profile
+    Phải là: Private
+
+    Window + R
+    b1: gõ services.msc
+    b2:  đảm bảo các dịch vụ sau đang chạy và 
+      Function Discovery Provider Host
+      Function Discovery Resource Publication
+      SSDP Discovery
+      UPnP Device Host
+      Server
+      Workstation
+
+
+=========== Trên máy đọc file =====================
+
+  - check máy đọc file có đang bật yêu cầu SMB bằng lệnh 
+    PowerShell: "Get-SmbClientConfiguration"
+    mục RequireSecuritySignature phải là false 
+
+- Tắt SMB = Server Message Block (đổi cấu hình SMB client từ: "Chỉ kết nối với SMB server có signing" thành: "Cho phép kết nối cả SMB không signing" )
+  - mở PowerShell bằng Administrator
+    - b1: gõ : `Set-SmbClientConfiguration -RequireSecuritySignature $false` 
+    - b2: chọn Y 
+    - b3: Restart lại máy tính
+    - b4: thử:  \\172.12.10.130\File-Chung
+
+    Nếu vẫn chưa được gõ tiếp lệnh: 
+      `Set-SmbClientConfiguration -EnableInsecureGuestLogons $true`
+      Restart lại máy tính
